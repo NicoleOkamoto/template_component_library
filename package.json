@@ -1,5 +1,5 @@
 {
-  "name": "template_component_library",
+  "name": "@nicoleokamoto/template_component_library",
   "version": "0.0.1",
   "scripts": {
   "rollup": "rollup -c"
@@ -22,6 +22,9 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/NicoleOkamoto"
+  }
 
 }
