@@ -1,6 +1,6 @@
 {
   "name": "@nicoleokamoto/template_component_library",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
@@ -40,6 +40,7 @@
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^8.1.10",
+    "styled-components": "^6.1.11",
     "typescript": "^5.5.2"
   },
   "main": "dist/cjs/index.js",
