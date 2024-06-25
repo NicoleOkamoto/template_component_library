@@ -1,6 +1,6 @@
 {
   "name": "@nicoleokamoto/template_component_library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
@@ -23,6 +23,7 @@
     "@storybook/addon-interactions": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",
     "@storybook/addon-onboarding": "^8.1.10",
+    "@storybook/addon-themes": "^8.1.10",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.4",
     "@storybook/blocks": "^8.1.10",
     "@storybook/react": "^8.1.10",
