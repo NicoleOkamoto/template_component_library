@@ -1,6 +1,6 @@
 {
   "name": "@nicoleokamoto/template_component_library",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
