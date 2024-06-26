@@ -1,10 +1,14 @@
+// Button.types.ts
 import { MouseEventHandler } from 'react';
 
+
+export type ButtonVariant = 'primary' | 'secondary' | 'invisible' | 'dashed' ;
+
 export type ButtonProps = {
-  text?: string;
-  primary?: boolean;
+  label?: string;
   disabled?: boolean;
+  backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
   onClick?: MouseEventHandler<HTMLButtonElement>;
-  label?: string;
+  variant: ButtonVariant;
 };

@@ -3,13 +3,7 @@
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     // Default
-    "target": "es5",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-
-
+    "types": ["jest", "@testing-library/jest-dom"],
 
     /* Projects */
     // "incremental": true,                              /* Save .tsbuildinfo files to allow for incremental compilation of projects. */

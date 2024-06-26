@@ -1,42 +1,59 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import Button from './Button';
+// Button.stories.tsx
+import { Meta, StoryObj } from '@storybook/react';
+import Button from './Button'
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
-  title: 'ReactComponentLibrary/Button',
+
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+  argTypes: {
+    variant: { control: false }, // Exclude variant from Storybook controls
+    backgroundColor: { control: 'color' },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
+  },
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+type Story = StoryObj<typeof Button>;
+
 export const Primary: Story = {
   args: {
-    label: 'Hello World!',
+    label: 'Primary Button',
+    variant: 'primary',
+    disabled: false,
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Click Me!',
+    label: 'Secondary Button',
+    variant: 'secondary',
+    disabled: false,
   },
 };
 
-export const Warning: Story = {
+export const Invisible: Story = {
   args: {
-    label: 'Delete now',
+    label: 'Invisible Button',
+    variant: 'invisible',
+    disabled: false,
+  },
+};
 
-  }
+export const Dashed: Story = {
+  args: {
+    label: 'Dashed Button',
+    variant: 'dashed',
+    disabled: false,
+  },
 };
